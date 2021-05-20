@@ -8,4 +8,13 @@ const add = async (book) => {
     client.close()
 }
 
-module.exports = {add}
+const remove = async (id) => {
+    
+}
+
+
+const list = async () => {
+    
+}
+
+module.exports = {add,remove,list}
