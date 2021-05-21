@@ -37,7 +37,7 @@ add(266,3, function(error,data){
 //     console.log('Error: '+error)
 // })
 
-function addPromise(a,b){
+function addPromise(a,b) {
     return new Promise((resolve,reject)=>{
         setTimeout(() => {
             const d = a + b;
@@ -70,17 +70,17 @@ function subPromise(a,b){
 // // add 40 + 50
 // // sub result from above with 20
 
-// addPromise(40,50).then((data)=>{
-//     console.log(data)
-//     subPromise(data,20).then((sResult)=>{
-//         console.log(sResult)
-//     }).catch((error)=>{
-//         console.error(error)
-//     })
-// })
-// .catch((error)=>{
-//     console.error(error)
-// });
+addPromise(40,50).then((data)=>{
+    console.log(data)
+    subPromise(data,20).then((sResult)=>{
+        console.log(sResult)
+    }).catch((error)=>{
+        console.error(error)
+    })
+})
+.catch((error)=>{
+    console.error(error)
+});
 
 //async and await
 
