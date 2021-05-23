@@ -34,10 +34,11 @@ const remove = (id) => {
 
 const update = (book) => {
     return collection.updateOne({_id: ObjectId(book._id)},
-        // return collection.updateOne({id: {$eq: book.id}},
             { $set : {
                 title: book.title,
-                category: book.category
+                category: book.category,
+                pDate: book.pDate,
+                price: book.price
             }})
 }
 
