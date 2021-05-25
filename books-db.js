@@ -1,5 +1,4 @@
 const {ObjectId} = require('mongodb')
-const { boolean } = require('yargs')
 const client = require('./db')
 
 const db = client.db('itcdb')
